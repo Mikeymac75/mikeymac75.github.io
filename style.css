@@ -1,0 +1,174 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background: #005A9C; /* Professional Blue */
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #005A9C; /* Professional Blue */
+    border-bottom: 2px solid #005A9C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+article h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Hero Section Specifics (index.html) */
+#hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    border-bottom: none; /* No border for hero title */
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background: #E67E22; /* Contrasting Orange */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #D35400; /* Darker Orange on hover */
+}
+
+/* Services Page List Styles */
+#services ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+#services ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Form Placeholder Styles */
+#contact-form-section form div {
+    margin-bottom: 15px;
+}
+
+#contact-form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form-section input[type="text"],
+#contact-form-section input[type="email"],
+#contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for full width including padding */
+}
+
+#contact-form-section textarea {
+    resize: vertical;
+}
+
+#contact-form-section button[type="submit"] {
+    background: #005A9C; /* Professional Blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form-section button[type="submit"]:hover {
+    background: #004170; /* Darker Blue on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
