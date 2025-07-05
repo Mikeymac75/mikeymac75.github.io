@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMDataSolutions.ca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Roboto', sans-serif; font-weight: 700; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+
+        header { background: #333; color: #ffffff; padding-top: 30px; min-height: 70px; border-bottom: #5cb85c 3px solid; }
+        header a { color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
+        header ul { padding: 0; margin: 0; list-style: none; float: right; margin-top: 25px; }
+        header li { display: inline; padding: 0 20px 0 20px; }
+        header #branding { float: left; }
+        header #branding h1 { margin: 0; }
+        header .highlight, header .current a { color: #5cb85c; font-weight: bold; }
+        header nav a { transition: color 0.3s ease; } /* Added for nav links */
+        header nav a:hover { color: #ffffff; font-weight: bold; background-color: #5cb85c; padding: 5px 0; border-radius:3px; } /* Enhanced hover for nav */
+
+        .hero { background: #5cb85c url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 22px; margin-bottom: 30px; }
+        .button { background-color: #333; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-size: 18px; transition: background-color 0.3s ease; }
+        .button:hover { background-color: #1a1a1a; }
+
+        section { padding: 20px 0; border-bottom: 1px #cccccc solid; }
+        section h2 { text-align: center; margin-bottom: 20px; font-size: 32px; color: #333; }
+        #about { background-color: #ffffff; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 20px; text-align: center; }
+        .service-item { background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-item:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .service-item img { max-width: 80px; margin-bottom: 15px; }
+        .service-item h3 { font-size: 20px; margin-bottom: 10px; color: #5cb85c; }
+        .service-item p { font-size: 16px; line-height: 1.6; }
+
+        #contact { background-color: #f9f9f9; }
+        #contactForm { max-width: 600px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea { width: calc(100% - 22px); padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        .form-group textarea { resize: vertical; }
+        #contactForm button { display: block; width: auto; margin: 0 auto; }
+        #form-messages { text-align: center; margin-top: 15px; }
+
+        footer { background-color: #333; color: #ffffff; text-align: center; padding: 20px 0; margin-top: 30px; border-top: #5cb85c 3px solid;}
+        footer p { margin: 0; }
+        footer a { color: #5cb85c; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Mobile Responsiveness */
+        @media(max-width: 768px){
+            header #branding, header nav, header nav ul { float: none; text-align: center; width: 100%; }
+            header nav ul li { display: block; padding: 10px 0; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .container { width: 95%; }
+            .services-grid { grid-template-columns: 1fr; } /* Stack service items */
+            #contactForm { width: 90%; }
+            header nav a:hover { background-color: transparent; color: #5cb85c; } /* Adjust nav hover for stacked menu */
+        }
+
+        @media(max-width: 480px){
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .button { font-size: 16px; padding: 12px 20px; }
+            section h2 { font-size: 28px; }
+            .service-item h3 { font-size: 18px; }
+            .service-item p { font-size: 15px; }
+            header { padding-top: 15px; min-height: 50px;}
+            header #branding h1 { font-size: 24px; }
+            header ul { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">MMData</span>Solutions.ca</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Empowering Your Business with Data Insights</h1>
+            <p>Transforming data into actionable intelligence to drive growth and innovation.</p>
+            <p><a href="#contact" class="button">Get a Free Consultation</a></p>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>MMDataSolutions.ca is dedicated to providing top-tier data analytics services. We specialize in helping small to medium-sized businesses harness the power of their data to make informed decisions, optimize operations, and achieve their strategic goals. Our team of experts is passionate about data and committed to delivering measurable results.</p>
+    </section>
+
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="https://via.placeholder.com/100x100.png?text=Data+Analysis" alt="Icon representing data analysis and charts">
+                <h3>Data Analysis & Visualization</h3>
+                <p>Unlock insights from your data with our advanced analysis and visualization techniques. We create custom dashboards and reports that are easy to understand and act upon.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/100x100.png?text=Predictive+Modeling" alt="Icon representing predictive modeling and forecasting">
+                <h3>Predictive Modeling</h3>
+                <p>Leverage the power of predictive analytics to forecast trends, understand customer behavior, and make proactive business decisions.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/100x100.png?text=Data+Strategy" alt="Icon representing data strategy and planning">
+                <h3>Data Strategy Consulting</h3>
+                <p>Develop a robust data strategy that aligns with your business objectives. We help you identify the right data, tools, and processes to maximize your ROI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Ready to transform your data into results? Reach out to us today!</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+        <div id="form-messages"></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MMDataSolutions.ca. All Rights Reserved.</p>
+            <p>Follow us on <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Handle Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const formMessages = document.getElementById('form-messages');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Basic validation message - in a real app, you'd send this to a server
+            formMessages.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessages.style.color = 'green';
+            contactForm.reset();
+
+            // Clear message after a few seconds
+            setTimeout(() => {
+                formMessages.textContent = '';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
