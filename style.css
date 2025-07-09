@@ -248,3 +248,30 @@ main section h2 {
         font-size: 30px;
     }
 }
+
+/* === Why Us / Advantage Section Styling === */
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.advantage-item i {
+    font-size: 48px; /* Makes the icons larger */
+    color: #00BFFF;   /* Uses the main accent color */
+    margin-bottom: 20px;
+}
+
+.advantage-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Responsive Design for Advantage Grid */
+@media (max-width: 768px) {
+    .advantage-grid {
+        grid-template-columns: 1fr;
+    }
+}
