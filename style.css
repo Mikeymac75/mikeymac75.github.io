@@ -62,7 +62,7 @@ nav.scrolled ul li a {
 /* Hero Section */
 #hero {
     height: 100vh;
-    background-image: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg');
+    background-image: url('hero-background.jpeg'); /* This line is changed */
     background-size: cover;
     background-position: center;
     position: relative; /* For the overlay */
