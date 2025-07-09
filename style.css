@@ -1,186 +1,152 @@
-/* General Body Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+/* General Setup */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Navigation Bar Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #f4f4f9;
+    color: #333; /* Default text color for content outside hero */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #0D2C54; /* Default heading color for content outside hero */
+}
+
+/* Navigation Bar */
 nav {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 nav ul {
-    padding: 0;
     list-style: none;
-    margin: 0;
+    text-align: right;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin-left: 25px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif; /* Ensure nav links also use Lato if not headings */
+    font-weight: 700; /* Make nav links a bit bolder */
+    transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Scrolled Navigation Bar */
+nav.scrolled {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Header Styles */
-header {
-    background: #005A9C; /* Professional Blue */
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+nav.scrolled ul li a {
+    color: #0D2C54;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section {
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.section-icon {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-section h2 {
-    color: #005A9C; /* Professional Blue */
-    border-bottom: 2px solid #005A9C;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-article h3 {
-    color: #333;
-    margin-top: 20px;
-}
-
-/* Hero Section Specifics (index.html) */
+/* Hero Section */
 #hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-image: url('Background Image.jpg');
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    color: #fff; /* Change text color to white for better contrast */
+    position: relative; /* For the overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Add some padding for smaller screens */
 }
 
-#hero h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    border-bottom: none; /* No border for hero title */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 44, 84, 0.65);
+    z-index: 1; /* Ensure overlay is above background but below content */
+}
+
+#hero > * {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
 }
 
 #hero p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
-/* Call to Action Button */
+/* CTA Button */
 .cta-button {
-    display: inline-block;
-    background: #E67E22; /* Contrasting Orange */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
+    background-color: #00BFFF;
+    color: #FFFFFF;
+    padding: 15px 35px;
     border-radius: 5px;
-    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    display: inline-block; /* Allows padding and centering */
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #D35400; /* Darker Orange on hover */
+    background-color: #009ACD;
 }
 
-/* Services Page List Styles */
-#services ul {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-#services ul li {
-    margin-bottom: 10px;
-}
-
-/* Contact Form Placeholder Styles */
-#contact-form-section form div {
-    margin-bottom: 15px;
-}
-
-#contact-form-section label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#contact-form-section input[type="text"],
-#contact-form-section input[type="email"],
-#contact-form-section textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Important for full width including padding */
-}
-
-#contact-form-section textarea {
-    resize: vertical;
-}
-
-#contact-form-section button[type="submit"] {
-    background: #005A9C; /* Professional Blue */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form-section button[type="submit"]:hover {
-    background: #004170; /* Darker Blue on hover */
-}
-
-
-/* Footer Styles */
+/* Footer */
 footer {
+    background-color: #0D2C54;
+    color: #FFFFFF;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    margin-top: 30px;
+    padding: 20px 0;
+    margin-top: 0; /* Remove any default margin if body content is short */
+}
+
+footer p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Placeholder for main content styling if needed */
+main {
+    padding-top: 0; /* Adjust if nav was not fixed, but it is */
+}
+
+main section { /* Example styling for sections below hero */
+    padding: 40px 20px;
+    background-color: #f4f4f9; /* Ensure it uses the page background */
+}
+main section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0D2C54;
 }
