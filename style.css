@@ -68,6 +68,13 @@ section {
     margin-bottom: 20px;
 }
 
+.section-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 section h2 {
     color: #005A9C; /* Professional Blue */
     border-bottom: 2px solid #005A9C;
@@ -84,6 +91,11 @@ article h3 {
 #hero {
     text-align: center;
     padding: 40px 20px;
+    background-image: url('Background Image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Change text color to white for better contrast */
 }
 
 #hero h2 {
