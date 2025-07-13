@@ -17,6 +17,15 @@ The website is composed of the following main files:
 - `style.css`: Contains the styling rules for the website.
 - Image files (`hero-background.jpg`, `contact-icon.svg`, `services-icon.svg`, `user-icon.svg`): Used for visual elements on the site.
 
+## Security
+
+This website has been configured with the following security measures:
+
+- **Robots.txt**: A `robots.txt` file is included to manage web crawler access to the site.
+- **Security.txt**: A `security.txt` file provides a point of contact for security researchers to report vulnerabilities.
+- **Content Security Policy (CSP)**: Each HTML page includes a Content Security Policy to help prevent cross-site scripting (XSS) and other code injection attacks.
+- **Subresource Integrity**: External resources like stylesheets are loaded with subresource integrity checks to prevent them from being tampered with.
+
 ## Setup and Usage
 
 This is a static website built with HTML and CSS. To view or modify the website:
