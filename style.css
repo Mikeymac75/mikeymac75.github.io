@@ -275,3 +275,52 @@ main section h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* === Interior Page Header === */
+#page-header {
+    background-color: #0D2C54; /* Matches footer */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#page-header h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+}
+
+/* === Contact Form Styling === */
+#contact-form {
+    max-width: 700px;
+    margin: 40px auto 0 auto; /* Adds space above the form */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #0D2C54;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+#contact-form button {
+    width: auto; /* Let the button size itself */
+    align-self: flex-start; /* Align button to the left */
+}
